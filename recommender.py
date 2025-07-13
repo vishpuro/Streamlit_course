@@ -105,6 +105,7 @@ column_configuration_recc = {
     ),
 }
 
+st.title("Course Recommender system using course title and description BOW similarity scores")
 
 select, compare = st.tabs(["Select Courses","See similar courses"])
 
