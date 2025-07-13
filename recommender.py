@@ -11,17 +11,17 @@ wide_space_default()
 
 @st.cache_data
 def get_course_content_dataset() -> pd.DataFrame:
-    course_content_df=pd.read_csv(r"C:\Users\Vishal\Desktop\data_science_intermediate\course_content.csv")
+    course_content_df=pd.read_csv(r"course_content.csv")
     return course_content_df[['COURSE_ID','TITLE','DESCRIPTION']]
 
 @st.cache_data
 def get_item_bow_sim_dataset() -> pd.DataFrame:
-    item_bow_sim_df=pd.read_csv(r"C:\Users\Vishal\Desktop\data_science_intermediate\item_bow_sim.csv")
+    item_bow_sim_df=pd.read_csv(r"item_bow_sim.csv")
     return item_bow_sim_df
 
 @st.cache_data
 def get_Bow_dataset() -> pd.DataFrame:
-    Bow_df=pd.read_csv(r"C:\Users\Vishal\Desktop\data_science_intermediate\Bow.csv")
+    Bow_df=pd.read_csv(r"Bow.csv")
 
     # Group the DataFrame by course index and ID, and get the maximum value for each group
     grouped_df = Bow_df.groupby(['doc_index', 'doc_id']).max().reset_index(drop=False)
